@@ -1,41 +1,72 @@
-!.htaccess
-!index.php
-!index.htm
-!index.html
+# gitignore file for WordPress Core
 
-# default
+# Configuration files with possibly sensitive information
+wp-config.php
+wp-tests-config.php
+.htaccess
+
+# Files and folders related to build/test tools
+/phpunit.xml
+/tests/phpunit/data/plugins/wordpress-importer
+/tests/phpunit/data/.trac-ticket-cache*
+/tests/qunit/compiled.html
+/.wp-tests-version
+/node_modules
+/npm-debug.log
+/build
+/tests/phpunit/build
+/wp-cli.local.yml
+
+# Files and folders that get created in wp-content
+/wp-content/blogs.dir
+/wp-content/languages
+/wp-content/mu-plugins
+/wp-content/plugins
+/wp-content/themes/*
+/wp-content/upgrade
+/wp-content/uploads
+/wp-content/advanced-cache.php
+/wp-content/blog-deleted.php
+/wp-content/blog-inactive.php
+/wp-content/blog-suspended.php
+/wp-content/db.php
+/wp-content/db-error.php
+/wp-content/debug.log
+/wp-content/install.php
+/wp-content/maintenance.php
+/wp-content/object-cache.php
+/wp-content/sunrise.php
+
+
+# Operating system specific files
+.DS_Store
+
+
+# Files related to applying patches
+*.rej
+*.orig
+*.patch
+*.diff
+.svn 
+
+
+
+# File for WordPress Devel
+
+# Theme used
+!/wp-content/themes/theme-name
+# Plugin used
+!/wp-content/plugins/plugin-name
+
+
+# Other
 *.log
+error_log
 wp-config.php
 wp-content/advanced-cache.php
-wp-content/backup-db/
-wp-content/backups/
-#wp-content/blogs.dir/
-wp-content/cache/
-wp-content/upgrade/
-wp-content/uploads/
-wp-content/wp-cache-config.php
-#wp-content/plugins/hello.php
-
-/.htaccess
-/license.txt
-/readme.html
-/sitemap.xml
-/sitemap.xml.gz
-
-
-#custom
-
-wp-config-db.php
-wp-content/logs
+wp-content/backup-db
+wp-content/backups
+wp-content/blogs.dir
 wp-content/cache
-wp-content/uploads/backwpup-*
-/.domains
-/.domains_index
-.svnget.bat
-.gitget.bat
-wp-content/cache/blogs.php
-wp-content/plugins/opensid/
-wp-content/languages/
-wp-admin/error_log
-.htaccess
-error_log
+wp-content/upgrade
+wp-content/uploads
